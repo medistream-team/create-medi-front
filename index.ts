@@ -105,7 +105,6 @@ function renderTemplate(src, dest) {
 function bindSubdomainName(subDomainName, dest) {
   const pipelinePath = path.resolve(dest, "bitbucket-pipelines.yml");
   const pipeline = fs.readFileSync(pipelinePath, "utf8");
-  console.log(pipeline.replace(/\{\{sub\}\}/g, subDomainName));
   fs.writeFileSync(
     pipelinePath,
     pipeline.replace(/\{\{\{sub\}\}/g, subDomainName)
@@ -214,8 +213,6 @@ async function init() {
   }
 
   const { projectName, shouldOverwrite, subdomainName } = result;
-
-  console.log(result);
 
   const root = path.join(cwd, targetDir);
 
