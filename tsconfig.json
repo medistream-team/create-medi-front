@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "outDir": "bin",
+    "target": "ESNext",
+    "moduleResolution": "node"
+  },
+  "exclude": [],
+}
