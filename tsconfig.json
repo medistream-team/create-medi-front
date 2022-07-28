@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "bin",
+    "outDir": "dist",
     "target": "ESNext",
     "moduleResolution": "node"
   },

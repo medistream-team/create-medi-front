@@ -7,9 +7,6 @@ import minimist from "minimist";
 import prompts from "prompts";
 import { red } from "kolorist";
 
-// eslint-disable-next-line no-underscore-dangle
-const __dirname = path.resolve();
-
 function postOrderDirectoryTraverse(dir, dirCallback, fileCallback) {
   for (const filename of fs.readdirSync(dir)) {
     const fullpath = path.resolve(dir, filename);
