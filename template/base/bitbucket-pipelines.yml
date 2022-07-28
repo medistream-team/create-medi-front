@@ -1,0 +1,54 @@
+pipelines:
+  branches:
+    main:
+      - step:
+          caches:
+            - node
+          name: Build
+          image: node:14-bullseye
+          script:
+            - npm install
+            - npm run build
+          artifacts:
+            - dist/**
+      - step:
+          name: Deploy to S3
+          image: atlassian/pipelines-awscli
+          script:
+            - aws s3 sync --delete ./dist s3://{{sub}}.medistream.co.kr
+            - aws cloudfront create-invalidation --distribution-id {{production-distribution-id}} --paths "/*"
+    develop:
+      - step:
+          caches:
+            - node
+          name: Build
+          image: node:14-bullseye
+          script:
+            - npm install
+            - npm run build
+          artifacts:
+            - dist/**
+      - step:
+          name: Deploy to S3
+          image: atlassian/pipelines-awscli
+          script:
+            - aws s3 sync --delete ./dist s3://{{sub}}.stg.medistream.co.kr
+            - aws cloudfront create-invalidation --distribution-id {{staging-distribution-id}} --paths "/*"
+  tags:
+    development-*:
+      - step:
+          caches:
+            - node
+          name: Build
+          image: node:14-bullseye
+          script:
+            - npm install
+            - npm run build:dev
+          artifacts:
+            - dist/**
+      - step:
+          name: Deploy to S3
+          image: atlassian/pipelines-awscli
+          script:
+            - aws s3 sync --delete ./dist s3://{{sub}}.dev.medistream.co.kr
+            - aws cloudfront create-invalidation --distribution-id {{development-distribution-id}} --paths "/*"
