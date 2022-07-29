@@ -108,6 +108,15 @@ function bindSubdomainName(subDomainName, dest) {
   );
 }
 
+function bindProjectNameOnReadme(projectName, dest) {
+  const readmePath = path.resolve(dest, "README.md");
+  const readme = fs.readFileSync(readmePath, "utf8");
+  fs.writeFileSync(
+    readmePath,
+    readme.replace(/\{\{projectName\}\}/g, projectName)
+  );
+}
+
 // --------------------------------------
 
 function canSkipEmptying(dir: string) {
@@ -133,6 +142,7 @@ function emptyDir(dir) {
 
   postOrderDirectoryTraverse(
     dir,
+    // eslint-disable-next-line no-shadow
     (dir) => fs.rmdirSync(dir),
     (file) => fs.unlinkSync(file)
   );
@@ -238,6 +248,7 @@ async function init() {
   render("base");
 
   bindSubdomainName(subdomainName, root);
+  bindProjectNameOnReadme(subdomainName, root);
 }
 
 init().catch(console.error);
