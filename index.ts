@@ -104,7 +104,7 @@ function bindSubdomainName(subDomainName, dest) {
   const pipeline = fs.readFileSync(pipelinePath, "utf8");
   fs.writeFileSync(
     pipelinePath,
-    pipeline.replace(/\{\{\{sub\}\}/g, subDomainName)
+    pipeline.replace(/\{\{sub\}\}/g, subDomainName)
   );
 }
 
@@ -222,7 +222,7 @@ async function init() {
   console.log(`\nScaffolding project in ${root}...`);
 
   // Scaffold the project
-  const pkg = { name: projectName, version: "0.0.0" };
+  const pkg = { name: projectName, version: "0.0.1" };
 
   fs.writeFileSync(
     path.resolve(root, "package.json"),
