@@ -1,0 +1,122 @@
+@import "./palette";
+@import "./palette_overrides";
+
+
+$primary: (
+  'base': map-get($deep-orange, 500),
+  'lighten-5': map-get($deep-orange, 50),
+  'lighten-4': map-get($deep-orange, 100),
+  'lighten-3': map-get($deep-orange, 200),
+  'lighten-2': map-get($deep-orange, 300),
+  'lighten-1': map-get($deep-orange, 400),
+  'darken-1': map-get($deep-orange, 600),
+  'darken-2': map-get($deep-orange, 700),
+  'darken-3': map-get($deep-orange, 800),
+  'darken-4': map-get($deep-orange, 900),
+  'accent-1': map-get($deep-orange, A100),
+  'accent-2': map-get($deep-orange, A200),
+  'accent-3': map-get($deep-orange, A300),
+  'accent-4': map-get($deep-orange, A300),
+);
+
+$secondary: (
+  'base': map-get($indigo, 500),
+  'lighten-5': map-get($indigo, 50),
+  'lighten-4': map-get($indigo, 100),
+  'lighten-3': map-get($indigo, 200),
+  'lighten-2': map-get($indigo, 300),
+  'lighten-1': map-get($indigo, 400),
+  'darken-1': map-get($indigo, 600),
+  'darken-2': map-get($indigo, 700),
+  'darken-3': map-get($indigo, 800),
+  'darken-4': map-get($indigo, 900),
+  'accent-1': map-get($indigo, A100),
+  'accent-2': map-get($indigo, A200),
+  'accent-3': map-get($indigo, A300),
+  'accent-4': map-get($indigo, A300),
+);
+
+$warning: (
+  'base': map-get($orange, 500),
+  'lighten-5': map-get($orange, 50),
+  'lighten-4': map-get($orange, 100),
+  'lighten-3': map-get($orange, 200),
+  'lighten-2': map-get($orange, 300),
+  'lighten-1': map-get($orange, 400),
+  'darken-1': map-get($orange, 600),
+  'darken-2': map-get($orange, 700),
+  'darken-3': map-get($orange, 800),
+  'darken-4': map-get($orange, 900),
+  'accent-1': map-get($orange, A100),
+  'accent-2': map-get($orange, A200),
+  'accent-3': map-get($orange, A300),
+  'accent-4': map-get($orange, A300),
+);
+
+$error: (
+  'base': map-get($red, 500),
+  'lighten-5': map-get($red, 50),
+  'lighten-4': map-get($red, 100),
+  'lighten-3': map-get($red, 200),
+  'lighten-2': map-get($red, 300),
+  'lighten-1': map-get($red, 400),
+  'darken-1': map-get($red, 600),
+  'darken-2': map-get($red, 700),
+  'darken-3': map-get($red, 800),
+  'darken-4': map-get($red, 900),
+  'accent-1': map-get($red, A100),
+  'accent-2': map-get($red, A200),
+  'accent-3': map-get($red, A300),
+  'accent-4': map-get($red, A300),
+);
+
+$info: (
+  'base': map-get($blue, 500),
+  'lighten-5': map-get($blue, 50),
+  'lighten-4': map-get($blue, 100),
+  'lighten-3': map-get($blue, 200),
+  'lighten-2': map-get($blue, 300),
+  'lighten-1': map-get($blue, 400),
+  'darken-1': map-get($blue, 600),
+  'darken-2': map-get($blue, 700),
+  'darken-3': map-get($blue, 800),
+  'darken-4': map-get($blue, 900),
+  'accent-1': map-get($blue, A100),
+  'accent-2': map-get($blue, A200),
+  'accent-3': map-get($blue, A300),
+  'accent-4': map-get($blue, A300),
+);
+
+$accent: (
+  'base': map-get($teal, 500),
+  'lighten-5': map-get($teal, 50),
+  'lighten-4': map-get($teal, 100),
+  'lighten-3': map-get($teal, 200),
+  'lighten-2': map-get($teal, 300),
+  'lighten-1': map-get($teal, 400),
+  'darken-1': map-get($teal, 600),
+  'darken-2': map-get($teal, 700),
+  'darken-3': map-get($teal, 800),
+  'darken-4': map-get($teal, 900),
+  'accent-1': map-get($teal, A100),
+  'accent-2': map-get($teal, A200),
+  'accent-3': map-get($teal, A300),
+  'accent-4': map-get($teal, A300),
+);
+
+$success: (
+  'base': map-get($green, 500),
+  'lighten-5': map-get($green, 50),
+  'lighten-4': map-get($green, 100),
+  'lighten-3': map-get($green, 200),
+  'lighten-2': map-get($green, 300),
+  'lighten-1': map-get($green, 400),
+  'darken-1': map-get($green, 600),
+  'darken-2': map-get($green, 700),
+  'darken-3': map-get($green, 800),
+  'darken-4': map-get($green, 900),
+  'accent-1': map-get($green, A100),
+  'accent-2': map-get($green, A200),
+  'accent-3': map-get($green, A300),
+  'accent-4': map-get($green, A300),
+);

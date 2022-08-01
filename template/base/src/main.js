@@ -4,7 +4,7 @@ import router from "./router";
 import store from "./store";
 import VueLazyload from "vue-lazyload";
 
-import "./assets/main.css";
+import "./styles/main.scss";
 import "inticons/fonts/inticons.bundle.min.css";
 
 const app = createApp(App);

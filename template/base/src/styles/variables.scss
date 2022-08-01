@@ -1,0 +1,37 @@
+@import './colors.scss';
+
+:root{
+  @each $key, $value in $red {
+    --red-#{$key} : #{$value};
+  }
+  @each $key, $value in $indigo {
+    --indigo-#{$key} : #{$value};
+  }
+  @each $key, $value in $blue {
+    --blue-#{$key} : #{$value};
+  }
+  @each $key, $value in $teal {
+    --teal-#{$key} : #{$value};
+  }
+  @each $key, $value in $green {
+    --green-#{$key} : #{$value};
+  }
+  @each $key, $value in $deep-orange {
+    --deep-orange-#{$key} : #{$value};
+  }
+  @each $key, $value in $blue-grey {
+    --blue-grey-#{$key} : #{$value};
+  }
+}
+
+:root{
+  --bg-color: #fff;
+  --fg-color: #000;
+  --primary-color: #{map-get($blue, 600)};
+  --secondary-color: #{map-get($blue-grey, 900)};
+  --warning-color: #{map-get($warning, base)};
+  --error-color: #{map-get($error, base)};
+  --info-color: #{map-get($info, base)};
+  --accent-color: #{map-get($accent, base)};
+  --success-color: #{map-get($success, base)};
+}
